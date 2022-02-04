@@ -1,0 +1,9 @@
+.list {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: grid;
+    gap: 1rem;
+    padding: 2rem 2rem 6rem;
+}

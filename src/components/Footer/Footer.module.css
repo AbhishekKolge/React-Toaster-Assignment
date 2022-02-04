@@ -1,0 +1,8 @@
+.footer {
+    background-color: var(--clr-secondary);
+    color: var(--clr-secondary--dark);
+    font-size: 1.8rem;
+    display: grid;
+    place-items: center;
+    padding: 1.5rem 1rem;
+}

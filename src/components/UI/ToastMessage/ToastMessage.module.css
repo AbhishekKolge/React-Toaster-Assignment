@@ -1,0 +1,27 @@
+.toast {
+    background-color: var(--clr-valid);
+    color: var(--clr-valid--dark);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 20rem;
+    padding: 1rem;
+    border-radius: .2rem;
+    text-transform: capitalize;
+}
+
+.text {}
+
+.close {
+    width: 2.2rem;
+    height: 2.2rem;
+    border: none;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background-color: transparent;
+}
+
+.close:hover {
+    background-color: var(--clr-valid--light);
+}

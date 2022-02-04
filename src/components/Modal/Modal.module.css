@@ -1,0 +1,69 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    display: grid;
+    place-items: center;
+    z-index: 100;
+}
+
+.modal {
+    background-color: var(--clr-light);
+    padding: 2rem;
+    border-radius: .4rem;
+    width: 40rem;
+    display: grid;
+    gap: 2rem;
+}
+
+.close {
+    font-size: 1.8rem;
+    width: 3rem;
+    height: 3rem;
+    display: grid;
+    place-items: center;
+    justify-self: end;
+    border: none;
+    background-color: transparent;
+}
+
+.form {
+    display: grid;
+    gap: 2rem;
+}
+
+.control {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 1rem;
+}
+
+.label {
+    text-transform: capitalize;
+}
+
+.input {
+    border-radius: .4rem;
+    border: .1rem solid var(--clr-secondary);
+    padding: .8rem 1rem;
+}
+
+.input:focus {
+    border-color: var(--clr-tertiary--dark);
+}
+
+.btn {
+    justify-self: center;
+    padding: .8rem 1.4rem;
+    border-radius: .4rem;
+    border: .1rem solid transparent;
+    background-color: var(--clr-valid--light);
+}
+
+.btn:hover {
+    background-color: var(--clr-valid);
+}

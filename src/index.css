@@ -1,13 +1,107 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+    --clr-primary: #d14242;
+    --clr-primary--dark: #b33131;
+    --clr-primary--light: #e66262;
+    --clr-secondary: #d3d3d3;
+    --clr-secondary--dark: #818181;
+    --clr-secondary--light: #eeeeee;
+    --clr-tertiary: #959ff8;
+    --clr-tertiary--dark: #8088d8;
+    --clr-tertiary--light: #b7befc;
+    --clr-light: #fff;
+    --clr-dark: #111;
+    --clr-valid: #9ae09a;
+    --clr-valid--light: #bbeebb;
+    --clr-valid--dark: #3b6d3b;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+    font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+    font-family: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+#root {
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 1.6rem;
+    color: var(--clr-dark);
+}
+
+input,
+button,
+a {
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+    font-size: 1.6rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.section {
+    padding: 5rem;
+    display: grid;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-self: start;
+    gap: 2rem;
+}
+
+.btn {
+    background-color: var(--clr-tertiary);
+    color: var(--clr-light);
+    border: .1rem solid transparent;
+    padding: 1rem 2rem;
+    border-radius: .5rem;
+}
+
+.btn:disabled {
+    background-color: var(--clr-secondary);
+    cursor: not-allowed;
+}
+
+.btn:hover {
+    background-color: var(--clr-tertiary--dark);
+}
+
+.btn:disabled:hover {
+    background-color: var(--clr-secondary);
+}
+
+.btn__setting {
+    border: .1rem solid transparent;
+    padding: 1rem;
+    border-radius: .5rem;
+    background-color: var(--clr-secondary--light);
+    align-self: start;
+}
+
+.btn__setting:hover {
+    background-color: var(--clr-secondary);
 }

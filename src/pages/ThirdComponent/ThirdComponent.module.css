@@ -1,0 +1,26 @@
+.section {
+    gap: 5rem;
+}
+
+.form {
+    display: grid;
+    gap: 2rem;
+}
+
+.control {
+    display: grid;
+    gap: 1rem;
+    width: 30rem;
+}
+
+.label {}
+
+.input {
+    border-radius: .4rem;
+    border: .1rem solid var(--clr-secondary);
+    padding: .8rem 1rem;
+}
+
+.input:focus {
+    border-color: var(--clr-tertiary--dark);
+}

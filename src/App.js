@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import ReactDOM from 'react-dom';
 
-function App() {
+import { Routes, Route, Navigate } from 'react-router-dom';
+
+import Header from './components/Header/Header';
+import FirstComponent from './pages/FirstComponent/FirstComponent';
+import SecondComponent from './pages/SecondComponent/SecondComponent';
+import ThirdComponent from './pages/ThirdComponent/ThirdComponent';
+import Footer from './components/Footer/Footer';
+import Modal from './components/Modal/Modal';
+import Notification from './components/Notification/Notification';
+
+import styles from './App.module.css';
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <main>
+        <Routes>
+          <Route path='/component-1' element={<FirstComponent />} />
+          <Route path='/component-2' element={<SecondComponent />} />
+          <Route path='/component-3' element={<ThirdComponent />} />
+          <Route path='*' element={<Navigate to='/component-1' />} />
+        </Routes>
+      </main>
+      <Footer />
+      {ReactDOM.createPortal(<Modal />, document.getElementById('modal-root'))}
+      {ReactDOM.createPortal(
+        <Notification />,
+        document.getElementById('notification-root')
+      )}
+    </>
   );
-}
+};
 
 export default App;

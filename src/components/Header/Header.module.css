@@ -1,0 +1,45 @@
+.header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    background-color: var(--clr-primary);
+    color: var(--clr-light);
+    padding: 0 2rem;
+    justify-items: space-between;
+}
+
+.logo__container {
+    display: grid;
+    place-items: center;
+}
+
+.logo {
+    font-size: 2rem;
+}
+
+.nav {
+    
+}
+
+.nav__list {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav__item {
+    display: grid;
+}
+
+.link {
+    padding: 2rem 1rem;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    transition:  background .2s;
+}
+
+.link:hover {
+    background-color: var(--clr-primary--dark);
+}
+
+.link.active {
+    background-color: var(--clr-primary--dark);
+}

@@ -1,0 +1,41 @@
+.container {
+    display: grid;
+    gap: 2rem;
+}
+
+.loading {
+    font-size: 3rem;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    justify-content: flex-end;
+}
+
+.btn {
+    width: 10rem;
+    padding: .8rem 1.5rem;
+    border-radius: .4rem;
+    border: none;
+    background-color: var(--clr-valid--light);
+}
+
+.btn:hover {
+    background-color: var(--clr-valid);
+}
+
+.btn:disabled {
+    cursor: not-allowed;
+    background-color: var(--clr-secondary);
+}
+
+.list {
+    display: grid;
+    gap: 2rem;
+}
+
+.item {
+    font-size: 1.8rem;
+}
