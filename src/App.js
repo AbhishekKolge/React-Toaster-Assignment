@@ -10,8 +10,6 @@ import Footer from './components/Footer/Footer';
 import Modal from './components/Modal/Modal';
 import Notification from './components/Notification/Notification';
 
-import styles from './App.module.css';
-
 const App = () => {
   return (
     <>

@@ -8,6 +8,7 @@ const ToastContext = createContext({
   deleteToastHandler: () => {},
   deleteToastListHandler: () => {},
   changeToastTextHandler: () => {},
+  clearNotificationHandler: () => {},
 });
 
 const defaultCartState = {
@@ -50,6 +51,10 @@ const toastReducer = (state, action) => {
       idVariant: state.idVariant,
     };
   }
+
+  if (action.type === 'CLEAR_NOTIFICATIONS') {
+    return defaultCartState;
+  }
   return defaultCartState;
 };
 
@@ -69,6 +74,10 @@ export const ToastContextProvider = (props) => {
 
   const changeToastTextHandler = (text) => {
     dispatchToastAction({ type: 'CHANGE_TEXT', text });
+  };
+
+  const clearNotificationHandler = () => {
+    dispatchToastAction({ type: 'CLEAR_NOTIFICATIONS' });
   };
 
   const deleteToastListHandler = (id) => {
@@ -94,6 +103,7 @@ export const ToastContextProvider = (props) => {
         deleteToastHandler,
         deleteToastListHandler,
         changeToastTextHandler,
+        clearNotificationHandler,
       }}
     >
       {props.children}

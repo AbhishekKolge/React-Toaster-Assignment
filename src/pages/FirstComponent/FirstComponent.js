@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 
 import ToastContext from '../../store/toast-context';
 
@@ -11,6 +11,10 @@ const FirstComponent = () => {
   const addToastMessage = () => {
     ctx.addToastHandler();
   };
+
+  useEffect(() => {
+    ctx.clearNotificationHandler();
+  }, []);
   return (
     <section className={`${styles.section} section`}>
       <div className={`${styles.container} container`}>

@@ -16,10 +16,6 @@
     font-size: 2rem;
 }
 
-.nav {
-    
-}
-
 .nav__list {
     display: flex;
     justify-content: flex-end;

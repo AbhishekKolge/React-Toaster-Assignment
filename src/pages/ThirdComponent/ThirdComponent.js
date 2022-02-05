@@ -32,6 +32,10 @@ const ThirdComponent = () => {
   };
 
   useEffect(() => {
+    ctx.clearNotificationHandler();
+  }, []);
+
+  useEffect(() => {
     if (firstRender) {
       firstRender = false;
       return;
